@@ -2,20 +2,18 @@
   require_once get_template_directory() . '/inc/load-plugins.php';
   require_once get_template_directory() . '/inc/register-field-groups.php';
   require_once get_template_directory() . '/inc/register-custom-rest-routes.php';
+  require_once get_template_directory() . '/inc/remove-wp-junk.php';
 
   // Specify theme supports
   add_theme_support( 'post-thumbnails');
 
   // WP Hooks
   add_action( 'wp_enqueue_scripts', 'arc_scripts' );
-  add_action( 'init', 'arc_init' );
+  add_action( 'init', 'arc_register_photo_post_types' );
+  add_action( 'init', 'arc_register_field_groups' );
+  add_action( 'init', 'arc_setup_featured_images_sizes' );
+  add_action( 'init', 'arc_remove_wp_junk' );
   add_action( 'rest_api_init', 'arc_register_custom_rest_routes' );
-
-  function arc_init() {
-    arc_register_photo_post_types();
-    arc_register_field_groups();
-    arc_setup_featured_images_sizes();
-  }
 
   function arc_scripts() {
     // TODO: find a solution for hashed files
