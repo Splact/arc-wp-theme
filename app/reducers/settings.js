@@ -9,6 +9,10 @@ import {
 const defaultState = {
   name: 'Arc',
   description: null,
+  svgLogo: null,
+  welcomePageBackground: null,
+  welcomePageOverlayColor: null,
+  welcomePageOverlayOpacity: null,
 
   isLoading: false,
   error: null,
@@ -21,12 +25,23 @@ const reducerMap = {
     error: null,
   }),
   [SETTINGS_FETCH_SUCCEEDED]: (state, { payload }) => {
-    const { name, description } = payload;
+    const {
+      name,
+      description,
+      svgLogo,
+      welcomePageBackground,
+      welcomePageOverlayColor,
+      welcomePageOverlayOpacity,
+    } = payload;
 
     return {
       ...state,
       name,
       description,
+      svgLogo,
+      welcomePageBackground,
+      welcomePageOverlayColor,
+      welcomePageOverlayOpacity,
       isLoading: false,
     };
   },

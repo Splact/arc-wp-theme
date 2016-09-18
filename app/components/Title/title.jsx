@@ -6,9 +6,9 @@ class Title extends Component {
     const { title, description } = this.props;
 
     return (
-      <div>
+      <div className={style.base}>
         <div className={style.title}>{ title }</div>
-        <div className={style.descirption}>{ description }</div>
+        <div className={style.description}>{ description }</div>
       </div>
     );
   }

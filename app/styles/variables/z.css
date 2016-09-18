@@ -3,4 +3,7 @@
     Z-indexes definitions
   */
   --modal: 500;
+  --content: 200;
+  --overlay: 100;
+  --base: 0;
 }

@@ -7,10 +7,10 @@ import Title from '../../components/Title';
 @translate()
 class Welcome extends Component {
   render() {
-    const { t, title, description } = this.props;
+    const { t, title, description, background, overlay } = this.props;
 
     return (
-      <Page>
+      <Page background={background} overlay={overlay} flex>
         <Helmet
           title={t('Welcome')}
           meta={[
@@ -29,6 +29,11 @@ Welcome.propTypes = {
   t: PropTypes.func,
   title: PropTypes.string,
   description: PropTypes.string,
+  background: PropTypes.string,
+  overlay: PropTypes.shape({
+    color: PropTypes.string,
+    opacity: PropTypes.string,
+  }),
 };
 
 export default Welcome;

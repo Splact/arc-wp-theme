@@ -1,6 +1,6 @@
 /* import used variables */
-:import('colors.css') {
-  --color--background: --black-haze;
+:import('typography.css') {
+  --background-color: --concrete;
 }
 :import('typography.css') {
   --text--size: --medium-size;
@@ -15,9 +15,8 @@
   padding: 0;
   min-height: 100vh;
 
+  background: --background-color;
   position: relative;
-
-  background: --color--background;
 
   /* typography */
   font-family: --text--family;

@@ -1,3 +1,6 @@
+:import('colors.css') {
+  --title--color: --snow;
+}
 :import('typography.css') {
   --description--size: --medium-size;
   --description--family: --text-family;
@@ -5,12 +8,21 @@
   --title--family: --heading-family;
 }
 
+.base {
+  margin: auto;
+  color: --title--color;
+}
+
 .title {
   font-family: --title--family;
   font-size: --title--size;
+  color: inherit;
+  text-align: center;
 }
 
 .description {
   font-family: --description--family;
   font-size: --description--size;
+  color: inherit;
+  text-align: center;
 }

@@ -5,6 +5,11 @@ function mS2P({ settings }) {
   return {
     title: settings.name,
     description: settings.description,
+    background: settings.welcomePageBackground,
+    overlay: {
+      color: settings.welcomePageOverlayColor,
+      opacity: settings.welcomePageOverlayOpacity,
+    },
   };
 }
 
