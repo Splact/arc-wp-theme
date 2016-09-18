@@ -22,14 +22,9 @@
   /* typography */
   font-family: --text--family;
   font-size: --text--size;
-
-  opacity: 0;
-  transition: opacity .4s  linear;
 }
 
-.app--ready {
-  opacity: 1;
-}
+.app--ready {}
 
 h1,
 h2,

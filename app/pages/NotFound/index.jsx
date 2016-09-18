@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { translate, Interpolate } from 'react-i18next';
+import Page from '../../components/Page';
 
 @translate()
 class NotFound extends Component {
@@ -10,7 +11,7 @@ class NotFound extends Component {
     const codePath = <code>/{params.wrongPath}</code>;
 
     return (
-      <div>
+      <Page>
         <Helmet
           title="404"
           meta={[
@@ -24,7 +25,7 @@ class NotFound extends Component {
         />
         <h1>404</h1>
         <p><Interpolate i18nKey="The page {{codePath}} was not found." codePath={codePath} /></p>
-      </div>
+      </Page>
     );
   }
 }

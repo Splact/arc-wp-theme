@@ -1,11 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import style from './style.css';
-import PageWrapper from './pageWrapper';
 
 class PagesDirector extends Component {
   render() {
-    const { children: page, currentPageSlug } = this.props;
+    const { children: page, currentPageSlug, isReady } = this.props;
 
     return (
       <ReactCSSTransitionGroup
@@ -20,11 +19,15 @@ class PagesDirector extends Component {
           leaveActive: style.pageLeaveActive,
         }}
         transitionAppear
-        transitionAppearTimeout={500}
+        transitionAppearTimeout={1000}
         transitionEnterTimeout={600}
         transitionLeaveTimeout={250}
       >
-        <PageWrapper key={`page-${currentPageSlug}`}>{ page }</PageWrapper>
+        {
+          isReady && React.cloneElement(page, {
+            key: `page-${currentPageSlug}`,
+          })
+        }
       </ReactCSSTransitionGroup>
     );
   }
@@ -37,6 +40,7 @@ PagesDirector.defaultProps = {
 PagesDirector.propTypes = {
   children: PropTypes.node,
   currentPageSlug: PropTypes.string,
+  isReady: PropTypes.bool,
 };
 
 export default PagesDirector;

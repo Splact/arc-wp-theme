@@ -28,7 +28,12 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <Headband />
-        <PagesDirector currentPageSlug={currentPageSlug}>{ children }</PagesDirector>
+        <PagesDirector
+          isReady={isReady}
+          currentPageSlug={currentPageSlug}
+        >
+          { children }
+        </PagesDirector>
       </div>
     );
   }

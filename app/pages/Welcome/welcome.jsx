@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { translate } from 'react-i18next';
+import Page from '../../components/Page';
 
 @translate()
 class Welcome extends Component {
@@ -8,7 +9,7 @@ class Welcome extends Component {
     const { t, title, description } = this.props;
 
     return (
-      <div>
+      <Page>
         <Helmet
           title={t('Welcome')}
           meta={[
@@ -20,7 +21,7 @@ class Welcome extends Component {
         />
         <h1>{ title }</h1>
         <p>{ description }</p>
-      </div>
+      </Page>
     );
   }
 }
