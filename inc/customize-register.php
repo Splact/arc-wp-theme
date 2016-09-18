@@ -3,7 +3,7 @@
 
     // Add SVG Logo setting
     $wp_customize->add_setting( 'svg_logo' , array(
-      'default'     => '',
+      'default' => get_template_directory_uri() . '/assets/icons/logo.svg',
       'transport'   => 'refresh',
     ) );
     $wp_customize->add_control( new WP_Customize_Upload_Control(
@@ -24,7 +24,7 @@
 
     // Add Background setting
     $wp_customize->add_setting( 'welcome_page_background' , array(
-      'default' => '',
+      'default' => get_template_directory_uri() . '/assets/images/welcome-background-default.jpg',
       'transport' => 'refresh',
     ) );
     $wp_customize->add_control( new WP_Customize_Upload_Control(
