@@ -9,7 +9,7 @@
   --heading--family: --heading-family;
 }
 
-.app {
+.base {
   overflow: auto;
   box-sizing: border-box;
   padding: 0;
@@ -23,7 +23,7 @@
   font-size: --text--size;
 }
 
-.app--ready {}
+.ready {}
 
 h1,
 h2,

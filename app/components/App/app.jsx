@@ -20,8 +20,8 @@ class App extends Component {
 
     const styles = {
       app: classnames({
-        [style.app]: true,
-        [style.appReady]: isReady,
+        [style.base]: true,
+        [style.ready]: isReady,
       }),
     };
 

@@ -18,6 +18,15 @@
   font-size: --title--size;
   color: inherit;
   text-align: center;
+
+  animation: show-up 1s .4s both cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.line {
+  margin: 0 auto 2rem;
+  height: .2rem;
+  background: currentColor;
+  animation: extend 2s 2s both cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .description {
@@ -25,4 +34,25 @@
   font-size: --description--size;
   color: inherit;
   text-align: center;
+  animation: show-up 1s 1.4s both cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes show-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes extend {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
 }

@@ -8,6 +8,7 @@ class Title extends Component {
     return (
       <div className={style.base}>
         <div className={style.title}>{ title }</div>
+        <div className={style.line} />
         <div className={style.description}>{ description }</div>
       </div>
     );
