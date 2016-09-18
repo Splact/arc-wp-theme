@@ -1,0 +1,16 @@
+:import('typography.css') {
+  --description--size: --medium-size;
+  --description--family: --text-family;
+  --title--size: --xx-large-size;
+  --title--family: --heading-family;
+}
+
+.title {
+  font-family: --title--family;
+  font-size: --title--size;
+}
+
+.description {
+  font-family: --description--family;
+  font-size: --description--size;
+}

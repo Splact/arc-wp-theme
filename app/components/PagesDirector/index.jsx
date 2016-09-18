@@ -9,7 +9,7 @@ class PagesDirector extends Component {
     return (
       <ReactCSSTransitionGroup
         component="div"
-        className={style.pagesDirector}
+        className={style.base}
         transitionName={{
           appear: style.pageAppear,
           appearActive: style.pageAppearActive,
