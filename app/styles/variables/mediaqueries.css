@@ -1,0 +1,4 @@
+:export {
+    --tablet: screen and (min-width: 480px);
+    --desktop: screen and (min-width: 780px);
+}

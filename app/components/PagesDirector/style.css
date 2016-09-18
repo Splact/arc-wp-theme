@@ -1,0 +1,36 @@
+.pages-director {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.page--appear {
+  position: absolute;
+  width: 100%;
+  opacity: 0.01;
+}
+.page--appear.page--appear-active {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.page--enter {
+  position: absolute;
+  width: 100%;
+  opacity: 0.01;
+}
+.page--enter.page--enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .4s linear;
+  transition-delay: .2s;
+}
+
+.page--leave {
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+}
+.page--leave.page--leave-active {
+  opacity: 0.01;
+  transition: opacity .2s linear;
+}

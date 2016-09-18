@@ -1,0 +1,39 @@
+/* import used variables */
+:import('colors.css') {
+  --color--background: --black-haze;
+}
+:import('sizes.css') {
+  --spacing: --common-spacing;
+}
+:import('typography.css') {
+  --text--size: --medium-size;
+  --text--family: --text-family;
+  --heading--size: --xx-large-size;
+  --heading--family: --heading-family;
+}
+
+.app {
+  overflow: auto;
+  box-sizing: border-box;
+  padding: --spacing;
+  min-height: 100vh;
+  background: --color--background;
+
+  /* typography */
+  font-family: --text--family;
+  font-size: --text--size;
+
+  opacity: 0;
+  transition: opacity .4s  linear;
+}
+
+.app--ready {
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: --heading--family;
+}
