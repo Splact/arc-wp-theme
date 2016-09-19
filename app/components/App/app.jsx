@@ -15,12 +15,13 @@ class App extends Component {
   }
 
   render() {
-    const { children, isReady } = this.props;
+    const { children, isReady, theme } = this.props;
     const currentPageSlug = this.getCurrentPageSlug();
 
     const styles = {
       app: classnames({
         [style.base]: true,
+        [theme]: true,
         [style.ready]: isReady,
       }),
     };
@@ -41,6 +42,7 @@ class App extends Component {
 
 App.propTypes = {
   isReady: PropTypes.bool,
+  theme: PropTypes.string,
   boot: PropTypes.func,
   children: PropTypes.node,
   location: PropTypes.shape({

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import style from './style.css';
 import Overlay from '../Overlay';
 
-class PageWrapper extends Component {
+class Page extends Component {
   render() {
     const { children, background, flex, overlay } = this.props;
 
@@ -23,13 +23,13 @@ class PageWrapper extends Component {
         <div className={style.content}>
           { children }
         </div>
-        <Overlay color={overlay.color} opacity={overlay.opacity} />
+        { overlay && <Overlay color={overlay.color} opacity={overlay.opacity} /> }
       </div>
     );
   }
 }
 
-PageWrapper.propTypes = {
+Page.propTypes = {
   children: PropTypes.node,
   background: PropTypes.string,
   overlay: PropTypes.shape({
@@ -39,4 +39,4 @@ PageWrapper.propTypes = {
   flex: PropTypes.bool,
 };
 
-export default PageWrapper;
+export default Page;

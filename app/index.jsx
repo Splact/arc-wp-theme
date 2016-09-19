@@ -10,6 +10,7 @@ import configureStore from './libs/configureStore';
 
 import App from './components/App';
 import Welcome from './pages/Welcome';
+import Photographer from './pages/Photographer';
 import NotFound from './pages/NotFound';
 
 const store = configureStore();
@@ -20,7 +21,8 @@ ReactDOM.render((
       <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute name="welcome" component={Welcome} />
-          {/* Insert your routes here */}
+
+          <Route path="/photographer" component={Photographer} />
 
           {/* Leave "not found" as last route */}
           <Route path="/:wrongPath" component={NotFound} />

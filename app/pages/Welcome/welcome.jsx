@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { translate } from 'react-i18next';
 import Page from '../../components/Page';
 import Title from '../../components/Title';
+import NavBar from '../../components/NavBar';
 
 @translate()
 class Welcome extends Component {
@@ -20,6 +21,7 @@ class Welcome extends Component {
           ]}
         />
         <Title />
+        <NavBar />
       </Page>
     );
   }

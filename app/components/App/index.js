@@ -3,9 +3,10 @@ import { bindActionCreators } from 'redux';
 import App from './app';
 import { boot } from '../../actions/app';
 
-function mS2P({ app }) {
+function mS2P({ app, settings }) {
   return {
     isReady: app.isReady,
+    theme: `${settings.theme}-theme`,
   };
 }
 
