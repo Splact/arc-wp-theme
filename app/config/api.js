@@ -1,5 +1,7 @@
 const config = ({ isProd }) => {
-  let mergedConfig = {};
+  let mergedConfig = {
+    timeout: 6000,
+  };
 
   if (isProd) {
     mergedConfig = Object.assign({}, mergedConfig, {
