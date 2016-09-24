@@ -24,7 +24,7 @@ function makeConfig() {
           loaders: [
             'style?sourceMap',
             'css?camelCase&modules&importLoaders=1&' +
-            'localIdentName=[folder]--[local]---[hash:base64:5]',
+            'localIdentName=[folder]--[local]---[emoji:1]',
             'postcss?sourceMap',
           ],
         },

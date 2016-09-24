@@ -35,7 +35,7 @@ function makeConfig({ paths, pkg, isLive, screwIE8 }) {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract('style', [
             'css?camelCase&modules&importLoaders=1&' +
-            'localIdentName=[folder]--[local]---[hash:base64:5]',
+            'localIdentName=[folder]--[local]---[emoji:1]',
             'postcss?sourceMap',
           ]),
           include: paths.app,
