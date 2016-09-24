@@ -21,7 +21,6 @@ class Welcome extends Component {
           ]}
         />
         <Title />
-        <NavBar />
       </Page>
     );
   }

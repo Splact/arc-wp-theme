@@ -12,7 +12,7 @@ class NavLink extends Component {
           to="/"
           className={style.link}
           activeClassName={style.linkActive}
-        >{children}</IndexLink>
+        >{children}<span /></IndexLink>
       );
     }
 
@@ -21,7 +21,7 @@ class NavLink extends Component {
         to={to}
         className={style.link}
         activeClassName={style.linkActive}
-      >{children}</Link>
+      >{children}<span /></Link>
     );
   }
 }
