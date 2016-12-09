@@ -1,0 +1,12 @@
+:import('sizes.css') {
+  --content-width: --content-width;
+  --common-spacing: --common-spacing;
+}
+
+.base {
+  width: 100%;
+  max-width: --content-width;
+
+  padding: --common-spacing;
+  margin: auto;
+}

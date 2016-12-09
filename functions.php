@@ -3,6 +3,7 @@
   require_once get_template_directory() . '/inc/load-plugins.php';
   require_once get_template_directory() . '/inc/register-field-groups.php';
   require_once get_template_directory() . '/inc/register-custom-rest-routes.php';
+  require_once get_template_directory() . '/inc/register-custom-api-fields.php';
   require_once get_template_directory() . '/inc/remove-wp-junk.php';
   require_once get_template_directory() . '/inc/customize-register.php';
 
@@ -16,6 +17,7 @@
   add_action( 'init', 'arc_setup_featured_images_sizes' );
   add_action( 'init', 'arc_remove_wp_junk' );
   add_action( 'rest_api_init', 'arc_register_custom_rest_routes' );
+  add_action( 'rest_api_init', 'arc_register_custom_api_fields' );
   add_action( 'customize_register', 'arc_customize_register' );
 
   function arc_register_photo_post_types() {
@@ -35,6 +37,9 @@
           'title',
           'thumbnail'
         ),
+        'show_in_rest' => true,
+        'rest_base' => 'photos',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
         'menu_position' => 5,
         'menu_icon' => 'dashicons-camera'
       )

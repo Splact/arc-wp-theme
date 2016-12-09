@@ -1,6 +1,10 @@
 :import('z.css') {
   --z-content: --content;
 }
+:import('colors.css') {
+  --background: --snow;
+  --text-color: --dark-gray;
+}
 
 .base {
   position: absolute;
@@ -22,4 +26,14 @@
   width: 100%;
   height: 100%;
   z-index: --z-content;
+}
+
+
+/* THEMES */
+/* THEME: hera */
+:global .hera-theme {
+  :local .base {
+    background-color: --background;
+    color: --text-color;
+  }
 }

@@ -79,7 +79,15 @@ class WebApi {
 
   // public methods
   fetchSettings() {
-    const request = () => fetch(`${config.api.baseURL}/settings`);
+    const url = `${config.api.baseURL}/${config.api.themeNamespace}/settings`;
+    const request = () => fetch(url);
+
+    return this.call.bind(this, request, false);
+  }
+  fetchPhotos(page = 1) {
+    const params = `page=${page}&per_page=${config.api.pageSize}`;
+    const url = `${config.api.baseURL}/${config.api.wordpressNamespace}/photos?${params}`;
+    const request = () => fetch(url);
 
     return this.call.bind(this, request, false);
   }

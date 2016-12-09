@@ -1,10 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { translate } from 'react-i18next';
 import Page from '../../components/Page';
+import PhotoGrid from '../../components/PhotoGrid';
 
 @translate()
-class Photographer extends Component {
+class Photographer extends PureComponent {
   render() {
     const { t } = this.props;
 
@@ -18,7 +19,8 @@ class Photographer extends Component {
             { property: 'og:description', content: t('Photo collection') },
           ]}
         />
-        photo collection
+
+        <PhotoGrid />
       </Page>
     );
   }
